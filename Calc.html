@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="css/Calc.css">
+  <title>Calculadora Mágica (1 – 63)</title>
+ </head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="logo">CM</div>
+        <div>
+          <h1>Calculadora Mágica — Adivina tu número entre 1 y 63</h1>
+          <p class="lead">Responde sí / no. Solo verás una lista a la vez.</p>
+        </div>
+      </header>
+
+      <div class="board">
+        <div class="panel">
+          <div class="instructions" id="instr">Presiona <strong>Comenzar</strong> cuando estés listo.</div>
+
+          <div class="status" id="stepInfo">Listas mostradas: 0 / 6</div>
+
+          <div class="progress"><i id="progressBar"></i></div>
+
+          <div id="listArea" style="margin-top:14px;display:none;">
+            <div class="muted-small">¿Tu número está en esta lista?</div>
+            <div class="list-grid" id="numbersGrid"></div>
+          </div>
+
+          <div class="controls">
+            <button class="btn" id="startBtn">Comenzar</button>
+            <button class="btn yes" id="btnYes" style="display:none;">Sí</button>
+            <button class="btn no" id="btnNo" style="display:none;">No</button>
+            <button class="btn ghost" id="revealBtn" style="display:none;">Revelar</button>
+            <button class="btn ghost" id="playAgainBtn" style="display:none;">Jugar otra vez</button>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="result">
+            <div class="muted-small">Tu número es:</div>
+            <h2 id="finalNumber">—</h2>
+            <div id="finalText" class="muted-small">Aún no hemos adivinado.</div>
+
+            <div style="margin-top:12px;display:flex;gap:8px;justify-content:center;">
+              <button class="btn ghost" id="resetBtn">Resetear</button>
+            </div>
+          </div>
+          <footer>
+            <small>Modo 1 – 63 • 6 listas</small>
+            <small>Creado por JFC</small>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </div>
+ <script src="js/Calc.js"></script>
+</body>
+</html>
